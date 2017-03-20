@@ -1,3 +1,4 @@
+ruby '2.4.0'
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -7,6 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
 gem 'rails', '~> 5.0.2'
 gem 'puma',         '3.4.0'
 gem 'sass-rails',   '5.0.6'
@@ -26,6 +28,10 @@ group :development do
   gem 'listen',                '3.0.8'
   gem 'spring',                '1.7.2'
   gem 'spring-watcher-listen', '2.0.0'
+end
+
+group :production do
+  gem 'pg', '0.18.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
